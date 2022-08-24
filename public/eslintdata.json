@@ -1,0 +1,60 @@
+{
+  "2022-08-24": {
+    "ember/no-get": [
+      "routes/invitation.js",
+      "routes/locations.js",
+      "routes/locations/location.js",
+      "routes/locations/location/edit.js",
+      "routes/locations/new.js",
+      "routes/login.js",
+      "routes/login/index.js",
+      "routes/login/token.js",
+      "routes/news-items.js",
+      "routes/news-items/index.js",
+      "routes/news-items/new.js"
+    ],
+    "ember/no-side-effects": [
+      "utils/calendars/day.js",
+      "utils/checks/is-object.js",
+      "utils/colors/brightness.js",
+      "utils/computeds/current-schedules-path.js",
+      "utils/computeds/file-type.js",
+      "utils/computeds/format-cents-to-euros.js",
+      "utils/computeds/format-seconds-to-days.js",
+      "utils/computeds/format-seconds-to-hours.js",
+      "utils/computeds/format-seconds-to-minutes.js",
+      "utils/computeds/group-by.js",
+      "utils/computeds/integer.js",
+      "utils/date/is-same.js",
+      "utils/ember-data/extract-pagination.js",
+      "utils/ember-data/promise-proxy.js"
+    ]
+  },
+  "2022-08-25": {
+    "ember/no-get": [
+      "routes/locations/location.js",
+      "routes/locations/location/edit.js",
+      "routes/locations/new.js",
+      "routes/login.js",
+      "routes/login/index.js",
+      "routes/login/token.js",
+      "routes/news-items.js",
+      "routes/news-items/index.js",
+      "routes/news-items/new.js"
+    ],
+    "ember/no-side-effects": [
+      "utils/calendars/day.js",
+      "utils/computeds/current-schedules-path.js",
+      "utils/computeds/file-type.js",
+      "utils/computeds/format-cents-to-euros.js",
+      "utils/computeds/format-seconds-to-days.js",
+      "utils/computeds/format-seconds-to-hours.js",
+      "utils/computeds/format-seconds-to-minutes.js",
+      "utils/computeds/group-by.js",
+      "utils/computeds/integer.js",
+      "utils/date/is-same.js",
+      "utils/ember-data/extract-pagination.js",
+      "utils/ember-data/promise-proxy.js"
+    ]
+  }
+}
