@@ -1,30 +1,24 @@
-## Goal
-
-this app should visualize eslint errors as historical data.
-
-Steps:
+# eslint-dashboard-ui
 
 
-  * run linter `npx eslint --format ./node_modules/eslint-summary-chart-formatter .`
-  * linter exports into JSON output.
-  * this app imports the JSON and displays historical data
+This app visualizes eslint errors as historical data.
 
 
-inspiration:
-* https://github.com/davidjbradshaw/eslint-formatter-summary-chart
+![Screenshot 2022-08-26 at 09 57 30](https://user-images.githubusercontent.com/13223/186852735-3da785cf-d649-46b3-87c3-2221fd87b4ae.png)
 
-
-Deploy:
+the eslint data can be generates with a formatter:
 
 ```sh
-$ aws s3 sync ./dist/ s3://staffomatic-frontend-lint-to-the-future/ --acl public-read
+$ eslint --format dashboard-exporter app > eslintdata.json
 ```
 
-https://vitejs.dev/guide/features.html
+copy the data to the dist foilder and run the app with:
+
+```sh
+$ npm run dev
+```
 
 
-## Tooling
-
-* https://vitejs.dev/guide/features.html
-* https://tailwindcss.com/
-* https://github.com/posva/vite-tailwind-starter/blob/master/tailwind.config.js
+Todo:
+- [ ] we should be able to fetch from absolut url
+- [ ] option to handle historical data automatically
