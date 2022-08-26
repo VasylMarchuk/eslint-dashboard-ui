@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import Rule from './rule'
 
 export default class Dashboard {
@@ -33,13 +32,10 @@ export default class Dashboard {
   }
 
   renderRules(rules) {
-    console.log(rules);
-
     const ruleData = {}
 
     for (let date in rules) {
       for (let ruleName in rules[date]) {
-        let ruleFileNames = rules[date][ruleName]
         if (!ruleData.hasOwnProperty(ruleName)) ruleData[ruleName] = {}
         if (!ruleData[ruleName].hasOwnProperty('dates')) ruleData[ruleName].dates = []
         if (!ruleData[ruleName].hasOwnProperty('fileCount')) ruleData[ruleName].fileCount = []

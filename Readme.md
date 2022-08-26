@@ -14,6 +14,11 @@ inspiration:
 * https://github.com/davidjbradshaw/eslint-formatter-summary-chart
 
 
+Deploy:
+
+```sh
+$ aws s3 sync ./dist/ s3://staffomatic-frontend-lint-to-the-future/ --acl public-read
+```
 
 https://vitejs.dev/guide/features.html
 

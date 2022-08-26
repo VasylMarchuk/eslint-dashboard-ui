@@ -53,22 +53,22 @@ Chart.register(
   SubTitle
 );
 
+import 'chartjs-adapter-moment';
+
 export default class Rule {
   constructor() {}
   async render(parentEl, ruleData, rules) {
+    let chartContainer = document.createElement("div");
+    chartContainer.className = "";
 
-    let chartContainer = document.createElement('div');
-    chartContainer.className = '';
-
-
-    let canv = document.createElement('canvas');
+    let canv = document.createElement("canvas");
     canv.id = ruleData.ruleName;
     canv.className = "";
 
     chartContainer.appendChild(canv);
     parentEl.appendChild(chartContainer);
 
-    const myChart = new Chart(canv, {
+    new Chart(canv, {
       type: "line",
       data: {
         labels: ruleData.dates,
@@ -76,6 +76,7 @@ export default class Rule {
           {
             label: ruleData.ruleName,
             data: ruleData.fileCount,
+            filePath: ruleData.filePath,
           },
         ],
       },
@@ -84,18 +85,24 @@ export default class Rule {
           y: {
             beginAtZero: true,
           },
+          x: {
+            type: 'time',
+            time: {
+                unit: 'day'
+            }
+          },
         },
         plugins: {
           tooltip: {
             callbacks: {
-              afterBody: function(context) {
-                const list = rules[[context[0].label]][ruleData.ruleName].join("\n")
-                console.log(list);
+              afterBody: function (context) {
+                const dataIndex = context[0].dataIndex
+                const list = context[0].dataset.filePath[dataIndex].join("\n");
                 return list;
-              }
-            }
-          }
-        }
+              },
+            },
+          },
+        },
       },
     });
   }
