@@ -21,4 +21,9 @@ $ npm run dev
 
 Todo:
 - [ ] we should be able to fetch from absolut url
-- [ ] option to handle historical data automatically
+- [ ] option to handle/merge historical data automatically
+
+
+Ideas:
+- [ ] add other graphs/analytics like outdated dependencies
+- [ ] define sorting in the UI
