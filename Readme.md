@@ -28,3 +28,4 @@ Todo:
 Ideas:
 - [ ] add other graphs/analytics like outdated dependencies
 - [ ] define sorting in the UI
+- [ ] add [Prettier](https://prettier.io)
