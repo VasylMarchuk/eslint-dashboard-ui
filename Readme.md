@@ -22,6 +22,7 @@ $ npm run dev
 Todo:
 - [ ] we should be able to fetch from absolut url
 - [ ] option to handle/merge historical data automatically
+- [ ] add tests
 
 
 Ideas:
